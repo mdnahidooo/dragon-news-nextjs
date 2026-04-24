@@ -1,5 +1,9 @@
 import React from 'react';
 
+export const metadata = {
+    title: "Dragon News - Career",
+};
+
 const CareerPage = () => {
     return (
         <div className='w-11/12 mx-auto'>
