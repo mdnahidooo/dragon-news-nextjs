@@ -4,6 +4,7 @@ import LeftSideBar from "@/components/homepage/news/LeftSideBar";
 import RightSideBar from "@/components/homepage/news/RightSideBar";
 import Image from "next/image";
 import { getCategories, getNewsCategoryId } from '@/lib/DataFetching';
+import NewsCard from '@/components/homepage/news/NewsCard';
 
 
 
@@ -32,7 +33,7 @@ const NewsCategoryPage = async ({ params }) => {
                         <div className="space-y-4 mt-6">
                             {news.length > 0 ? (
                                 news.map((n) => {
-                                    return <div key={n._id}>{n.title}</div>
+                                    return <NewsCard key={n._id} news={n}></NewsCard>;
                                 })
                             ) : (
                                 <h2 className="font-bold text-4xl text-center my-7">
